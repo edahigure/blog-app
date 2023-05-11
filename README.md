@@ -132,7 +132,7 @@ Thanks to microverse to asign me the homework
 
 ## ❓ FAQ <a name="faq"></a>
 
-- **Is there any restriction to adapting the app to other porpuse??**
+- **Is there any restriction to adapting the app to other purpose?**
 
   - No problem.
 
