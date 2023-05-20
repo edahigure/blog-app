@@ -1,15 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-
   first_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer',
-  posts_counter: 0)
+                           posts_counter: 0)
 
+  first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my first post', comments_counter: 0,
+                           likes_counter: 0)
 
-  first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my first post', comments_counter: 0, likes_counter: 0)
- 
-  subject { Comment.create(author: first_user, post:  first_post, text: 'Hi Tom -1!')}
-
+  subject { Comment.create(author: first_user, post: first_post, text: 'Hi Tom -1!') }
 
   before { subject.save }
 
@@ -21,8 +19,4 @@ RSpec.describe Comment, type: :model do
     subject.text = nil
     expect(subject).to_not be_valid
   end
-
-
-
-
 end
